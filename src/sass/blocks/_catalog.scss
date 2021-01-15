@@ -40,9 +40,12 @@
     }
     &__content {
         margin-top: 60px;
-        display: flex;
+        display: none;
         // justify-content:space-between;
         flex-wrap: wrap;
+        &_active {
+            display: flex;
+        }
     }
     &-item {
         width: 300px;
@@ -72,6 +75,7 @@
             color: #0d0d0d;
         }
         &__descr {
+            width: 259px;
             margin-top: 16px;
             font-size: 14px;
             font-weight: 300;
@@ -164,7 +168,7 @@
                 }
             }
         }
-        &__black {
+        &__back {
             position: absolute;
             bottom: 0;
             left: 50%;
