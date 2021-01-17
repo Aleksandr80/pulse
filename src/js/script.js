@@ -41,7 +41,7 @@ const slider = tns({
     nav: false,
     responsive: {
         320: {
-            nav: true,
+            nav: false,
             navPosition: 'bottom'
         },
         992: {

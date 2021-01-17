@@ -1,0 +1,291 @@
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 0 10px;
+    }
+    .advantages {
+        &__item {
+            max-width: 30%;
+        }
+        &__text {
+            br {
+                display: none;
+            }
+        }
+    }
+    .carousel {
+        padding: 50px 0;
+        .prev, .next {
+            display: none;
+        }
+    }
+    .catalog {
+        padding-bottom: 60px;
+        &__tabs {
+            margin-top: 50px;
+        }
+        &__content {
+            margin-top: 50px;
+            display: none;
+            // justify-content:space-between;
+            flex-wrap: wrap;
+            &_active {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &-item {
+            &:nth-child(2n+1) {
+                margin-right: 60px;
+            }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+    .feed {
+        &__item {
+            padding: 0 5px;
+            &:nth-child(2) {
+                margin-top: 50px;
+            }
+        }
+        &__descr {
+            br {
+                display: none;
+            }
+        }
+        &__text {
+            margin-left: 31px;
+            padding-right: 5px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        &_left {
+            font-size: 30px;
+        }      
+    }
+    .header {
+        &__phone {
+            font-size: 16px;
+        }
+        &__logo {
+            width: 180px;
+        }
+    }
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+        &__header {
+            text-align: center;
+        }
+        &__subheader {
+            text-align: center;
+        }
+    }
+    .advantages {
+        min-height: 392px;
+        padding: 50px 0 60px 0;
+        &__wrapper {
+            margin-top: 35px;
+        }
+        &__subtitle {
+            text-align: center;
+            margin-top: 28px;
+		    font-size: 14px;
+        }
+    }
+    .consultation {
+        min-height: 560px;
+        padding: 50px 0 41px 0;
+        &__descr {
+            margin-top: 50px;
+        }
+    }
+    .carousel {
+        padding: 40px 0;
+        img {
+            width: 100%;
+        }
+    }
+    .catalog {
+        padding-bottom: 50px;
+        &__tabs {
+            margin-top: 40px;
+        }
+        &__content {
+            margin-top: 40px;
+            display: none;
+            // justify-content:space-between;
+            flex-wrap: wrap;
+            &_active {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        &-item {
+            &:nth-child(2n+1) {
+                margin-right: 0;
+            }
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .title {
+        font-size: 24px;
+        &_left {
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    .header {
+        &__official {
+            display: none;
+        }
+        &__logo {
+            width: 120px;
+        }
+    }
+    .promo {
+        min-height: 590px;
+        padding: 11px 0 48px 0;
+        &__wrapper {
+            margin-top: 50px;
+            padding: 0;
+        }
+        &__header {
+            font-size: 32px;
+        }
+        &__subheader {
+            font-size: 20px;
+        }
+        &__icons {
+            margin-top: 55px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+        &__icon {
+            max-width: 90px;
+        }
+    }
+    .button {
+        &_main {
+            width: 260px;
+        }
+    }
+    .advantages {
+        min-height: 291px;
+        padding: 40px 0 50px 0;
+        &__text {
+            display: none;
+        }
+        &__subtitle {
+            max-width: 80%;
+        }    
+    }
+    .consultation {
+        min-height: 580px;
+        margin: 0 auto;
+        &__descr {
+            text-align: center;
+        }   
+    }
+    .feed-form {
+        max-width: 100%;
+        position: absolute;
+        // Выравниваем по центру форму
+        // top: calc(50% - высота_блока/2);
+        // left: calc(50% - ширина_блока/2);
+        left: calc(50% - 300px/2);
+        input {
+            margin-left: 10px;
+            margin-right: 10px;
+            max-width: 96%;
+        }
+    }
+    .button {
+        &_submit {
+            margin-left: auto;
+            margin-right: auto;
+            width: 94%;
+        }
+    }
+    .catalog {
+         &__tabs {
+             width: 95%;
+             padding-left: 5%;
+        }
+        &__tab {
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            width: calc(100%/3);
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+    .feed {
+        padding-bottom: 40px;
+        &__item {
+            flex-direction: column;
+            align-items: center;
+            &:nth-child(2) {
+                margin-top: 40px;
+            }
+        }
+        &__text {
+            margin-top: 20px;
+            // width: 656px;
+            margin-left: 0;
+            padding-right: 0;
+        }
+        hr {
+            margin: 30px 0;
+        }
+    } 
+}
+
+@media (max-width: 434px) {
+    .title {
+        &_left {
+            font-size: 20px;
+        }
+    }
+    .consultation {
+        &__descr {
+            font-size: 16px;
+        }
+    }
+    .catalog {
+        padding-bottom: 30px;
+        &__tabs {
+            margin-top: 26px;
+            // width: 95%;
+        }
+        &__tab {
+            padding-top: 8px;
+            // width: calc(100%/3);
+            height: 60px;
+            font-size: 12px;
+            line-height: 22px;
+            transform: skewX(0deg);
+            div {
+                transform: skewX(0deg);
+            }
+        }
+
+    }
+
+}
