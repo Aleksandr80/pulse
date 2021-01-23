@@ -3,6 +3,10 @@
     position: relative;
     &__map {
         height: 100%;
+        iframe {
+            width: 100%; 
+            height: 630px;
+        }
     }
     &__info {
         position: absolute;

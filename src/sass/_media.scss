@@ -233,19 +233,7 @@
             max-width: 100%;
             // margin-left: 10px;
             // margin-right: 10px;
-            
             }
-    //     max-width: 100%;
-    //     position: absolute;
-    //     // Выравниваем по центру форму
-    //     // top: calc(50% - высота_блока/2);
-    //     // left: calc(50% - ширина_блока/2);
-    //     left: calc(50% - 300px/2);
-    //     input {
-    //         margin-left: 10px;
-    //         margin-right: 10px;
-    //         max-width: 96%;
-    //     }
      }
     .catalog {
          &__tabs {
@@ -301,6 +289,12 @@
              height: 100%;
         }
     }
+    .modal {
+        &__close {
+            top: 2px;
+            right: 2px;
+        }
+    }
 }
 
 @media (max-width: 434px) {
@@ -336,7 +330,7 @@
     .modal {
         width: 280px;
         padding: 28px 10px 30px 10px;
-        min-height: 500px;
+        // min-height: 400px;
     }
     .feed-form {
         // width: 100%;

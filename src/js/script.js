@@ -159,6 +159,7 @@ toggleSlide('.catalog-item__back');
     // });
     // $('#order form').validate();
 
+    // Validation forms optimized
     function valideForms(form) {
         $(form).validate({
             rules: {
@@ -189,4 +190,41 @@ toggleSlide('.catalog-item__back');
     valideForms('#consultation-form');
     valideForms('#consultation form');
     valideForms('#order form');
+
+    //Masked Input Plugin for jQuery
+    $('input[name=phone]').mask("+7 (999) 999-9999");
+
+    //Отправка писем
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // Smooth scroll and pageup
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+    // Делаем скролинг плавным с помощью функции animate
+     //$("a[href^='#']").click(function(){
+     $("a[href='#up']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+ // Запускаем библиотеку WOW для анимации при скролинге до элемента заанимирванного в биб-ке animate.css
+  new WOW().init();
 });
